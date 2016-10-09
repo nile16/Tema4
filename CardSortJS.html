@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,  minimum-scale=1.0"> 
+	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="CardSortJS.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script src="jquery.ui.touch-punch.min.js"></script> <!-- Mobile compatibility for draggable items -->
+	<script src="jschannel.js"></script>
+	<script src="CardSort_CardList.js"></script>
+	<script src="CardSort_GroupList.js"></script>
+	<script src="CardSortJS.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="dimmer"></div>
+	<div id="message">
+	<small>Välkommen till en så kallad öppen kortsortering. 
+	Syftet med detta är att undersöka hur allmänheten tycker att saker och ting bör kategoriseras. Sedan ska resultatet vara underlag för en meny på en webbsida.
+	Med öppen avses att kategorierna namnges fritt av deltagaren men namnet ska så bra som möjligt beskriva innehållet i kategorin. 
+	Försök att bara använda det antal kategorier som redan finns, känns det omöjligt så skapa en eller två nya kategorier med plusknappen. 
+	Det behöver inte vara ungefär lika många saker i varje kategori. 
+	Titta helst inte på hur andra gör utan sortera som du tycker det ska vara. När du är klar trycker du på skicka. 
+	Tack för din medverkan.</small><br>
+	<span style="float:right"><button type="button" onclick="closeMessage()"><b>Kör igång!</b></button></span>
+	</div>
+	<div id="cardspaceheader">
+		<h3>Kort</h3>
+		<p class="subtitle">[Dra till en kategori, Klicka för att se detaljer]</p>
+	</div>
+	<div id="groupspaceheader">
+		<h3>Kategorier</h3>
+		<p class="subtitle">[Klicka för att namnge]</p>
+		<input type="text" id="nickName" name="fname" placeholder="Namn eller nick">
+		<button type="button" id="sendButton" onclick="output()">Skicka</button>
+	</div>
+	<br/>
+	<div id="cardspace">
+	</div>
+	<div id="groupwrapper">
+		<div id="groupspace"></div>
+		<div id="addgroup" class="controls">+</div>
+	</div>
+	<div id="hiddenspace"></div>
+</div>
+</body>
+</html>
